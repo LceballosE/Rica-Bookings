@@ -1,0 +1,26 @@
+export interface SideBarInterFace {
+  menu: MenuItem[];
+  className?:string
+  activeMenu: any,
+  setActiveMenu: (temp: any) => void,
+  level: number;
+}
+
+export interface MenuItem {
+  title: string;
+  url?: string;
+  icon?:
+    | "Home"
+    | "Users"
+    | "Map"
+    | "Briefcase"
+    | "Coffee"
+    | "Navigation"
+    | "Bookmark"
+    | "MessageSquare"
+    | "Settings"
+    | "LogIn"
+    | "PlusCircle";
+  type: "link" | "sub";
+  menu?: MenuItem[];
+}
